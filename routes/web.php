@@ -53,6 +53,9 @@ Route::get('/inserir-projeto','App\Http\Controllers\ProjetoController@projeto_se
 Route::put('/editar-projeto/{id}','App\Http\Controllers\ProjetoController@editar')->middleware(Authenticate::class);
 Route::delete('/excluir-projeto/{id}','App\Http\Controllers\ProjetoController@excluir')->middleware(Authenticate::class);
 
+// Rota da Dashboard
 
+Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')
+    ->middleware(Authenticate::class);
 
 

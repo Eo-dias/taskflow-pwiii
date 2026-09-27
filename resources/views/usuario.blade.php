@@ -19,6 +19,7 @@
             </div>
 
             <nav class="agenda-nav">
+                <a href="/dashboard">Dashboard</a>
                 <a href="/">Tarefas</a>
                 <a href="/usuario" class="active">Usuários</a>
                 <a href="/projeto">Projetos</a>

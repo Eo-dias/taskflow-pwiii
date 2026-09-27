@@ -21,7 +21,8 @@
                 </div>
             </div>
 
-            <nav class="agenda-nav">
+           <nav class="agenda-nav">
+                <a href="/dashboard">Dashboard</a>
                 <a href="/" class="active">Tarefas</a>
                 <a href="/usuario">Usuários</a>
                 <a href="/projeto">Projetos</a>
