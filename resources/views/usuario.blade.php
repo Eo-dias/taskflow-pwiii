@@ -33,9 +33,6 @@
                     <p>Visualize os usuários cadastrados no sistema.</p>
                 </div>
 
-                <div class="top-actions">
-                    <a href="/inserir-usuario" class="btn-primary">Novo usuário</a>
-                </div>
             </section>
 
             <section class="agenda-cards">

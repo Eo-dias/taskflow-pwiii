@@ -20,9 +20,6 @@ Route::post('/register', 'App\Http\Controllers\UsuarioController@insert');
 
 
 //Rotas de usuario
-Route::get('/inserir-usuario',function(){
-    return view('insertUsuario');
-});
 
 Route::get('/usuario','App\Http\Controllers\UsuarioController@index')->middleware(Authenticate::class);
 Route::get('/enviar-usuario','App\Http\Controllers\UsuarioController@create')->middleware(Authenticate::class);

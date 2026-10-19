@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="agenda-layout">
         <aside class="agenda-sidebar">
@@ -19,10 +21,11 @@
             </div>
 
             <nav class="agenda-nav">
+                <a href="/dashboard">Dashboard</a>
                 <a href="/" class="active">Tarefas</a>
                 <a href="/usuario">Usuários</a>
                 <a href="/projeto">Projetos</a>
-                
+
             </nav>
         </aside>
 
@@ -54,7 +57,7 @@
                             <select id="txProjeto" name="txProjeto" required>
                                 <option value="">Selecionar Projeto</option>
                                 @foreach($projeto as $p)
-                                    <option value="{{ $p->id }}">{{ $p->nome }}</option>
+                                <option value="{{ $p->id }}">{{ $p->nome }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -74,4 +77,5 @@
         </main>
     </div>
 </body>
+
 </html>

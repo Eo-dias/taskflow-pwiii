@@ -20,7 +20,7 @@
                             <path d="M14 20h20M14 28h14M14 36h8" stroke="white" stroke-width="3" stroke-linecap="round" />
                         </svg>
                     </div>
-                    <div class="brand-text">
+                    <div class="brand-text-2">
                         <h1>TaskFlow</h1>
                         <p>Organize tarefas, projetos e equipe com clareza.</p>
                     </div>
@@ -98,38 +98,53 @@
                 <form id="registerForm" class="login-form" method="POST" action="{{ url('/register') }}" novalidate>
                     @csrf
                     <div class="form-field">
-                        <label for="name">Nome</label>
+                        <label for="name">
+                            Nome <span class="required">*</span>
+                        </label>
                         <input
                             type="text"
                             id="name"
                             name="txNome"
+                            value="{{old('txNome')}}"
                             autocomplete="name"
                             placeholder="Seu nome completo"
                             required
                             aria-describedby="nameError">
-                        <span id="nameError" class="form-error" aria-live="polite"></span>
+
+                        @error('txNome')
+                        <span class="form-error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div class="form-field">
-                        <label for="email">E-mail</label>
+                        <label for="email">
+                            E-mail <span class="required">*</span>
+                        </label>
                         <input
                             type="email"
                             id="email"
                             name="txEmail"
+                            value="{{old('txEmail')}}"
                             autocomplete="email"
                             placeholder="seu@email.com"
                             required
                             aria-describedby="emailError">
-                        <span id="emailError" class="form-error" aria-live="polite"></span>
+                        @error('txEmail')
+                        <span class="form-error">{{ $message }}</span>
+                        @enderror
+
                     </div>
 
                     <div class="form-field">
-                        <label for="password">Senha</label>
+                        <label for="password">
+                            Senha <span class="required">*</span>
+                        </label>
                         <div class="password-wrapper">
                             <input
                                 type="password"
                                 id="password"
                                 name="txSenha"
+                                value="{{old('txSenha')}}"
                                 autocomplete="new-password"
                                 placeholder="••••••••"
                                 required
@@ -150,16 +165,21 @@
                                 </svg>
                             </button>
                         </div>
-                        <span id="passwordError" class="form-error" aria-live="polite"></span>
+                        @error('txSenha')
+                        <span class="form-error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div class="form-field">
-                        <label for="password_confirm">Confirmar senha</label>
+                        <label for="password_confirm">
+                            Confirmar senha <span class="required">*</span>
+                        </label>
                         <div class="password-wrapper">
                             <input
                                 type="password"
                                 id="password_confirm"
                                 name="password_confirm"
+                                value="{{old('password_confirm')}}"
                                 autocomplete="new-password"
                                 placeholder="••••••••"
                                 required
@@ -180,7 +200,9 @@
                                 </svg>
                             </button>
                         </div>
-                        <span id="passwordConfirmError" class="form-error" aria-live="polite"></span>
+                        @error('password_confirm')
+                        <span class="form-error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <button type="submit" class="btn-login" id="registerBtn">Criar conta</button>
@@ -193,7 +215,7 @@
         </section>
     </main>
 
-    <script src="{{ asset('js/register.js') }}"></script>
+    <!--<script src="{{ asset('js/register.js') }}"></script>-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

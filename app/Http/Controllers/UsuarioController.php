@@ -6,7 +6,10 @@ use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Auth\AuthenticationException;
+use Illuminate\Auth\AuthenticationException;        
+use App\Http\Requests;
+use App\Http\Requests\CadastroRequest;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
@@ -31,7 +34,7 @@ class UsuarioController extends Controller
         return view('insertUsuario');
     }
 
-    public function insert(Request $request)
+    public function insert(CadastroRequest $request)
     {
         $usuario = new Usuario();
 
@@ -86,7 +89,7 @@ class UsuarioController extends Controller
     }
 
     //login
-    public function fazerLogin(Request $request)
+    public function fazerLogin(LoginRequest $request)
     {
         $credenciais = $request->validate([
             'email' => 'required|email',

@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="top-actions">
-                    <a href="/projeto" class="btn-primary">Projetos</a>
+                    <a href="/inserir-tarefa" class="btn-primary">Nova Tarefa</a>
 
                     <form action="/logout" method="POST" style="display: inline;">
                         @csrf

@@ -62,6 +62,14 @@ textarea {
     line-height: 1.1;
 }
 
+.brand-text-2 h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #dbe6ff;
+    margin-bottom: 4px;
+    line-height: 1.1;
+}
+
 .brand-text p {
     font-size: 0.88rem;
     color: #64748b;
@@ -483,6 +491,9 @@ textarea {
     font-weight: 700;
     color: #334155;
 }
+.required{
+    color: red;
+}
 
 @media (max-width: 1100px) {
     .agenda-cards {
@@ -578,14 +589,6 @@ textarea {
 .brand-mark {
     color: #2563eb;
     filter: drop-shadow(0 8px 24px rgba(37, 99, 235, 0.35));
-}
-
-.brand-text h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #f8fafc;
-    margin-bottom: 4px;
-    line-height: 1.1;
 }
 
 .brand-text p {
