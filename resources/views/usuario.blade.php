@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuários | Minha Agenda</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>TaskFlow · Usuários e projetos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     <div class="agenda-layout">
         <aside class="agenda-sidebar">
             <div class="brand-box">
-                <img src="{{ asset('img/logo.jpeg') }}" alt="Logo Minha Agenda">
+                <img src="{{ asset('img/logo.jpeg') }}" alt="Logo TaskFlow">
                 <div class="brand-text">
-                    <h1>Minha Agenda</h1>
-                    <p>Organização do dia a dia</p>
+                    <h1>TaskFlow</h1>
+                    <p>Workspace de produtividade</p>
                 </div>
             </div>
 

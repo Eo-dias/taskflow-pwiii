@@ -7,10 +7,9 @@
 
     <title>Dashboard - TaskFlow</title>
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 </head>
@@ -23,11 +22,11 @@
 
             <div class="brand-box">
 
-                <img src="{{ asset('img/logo.jpeg') }}" alt="Logo Minha Agenda">
+                <img src="{{ asset('img/logo.jpeg') }}" alt="Logo TaskFlow">
 
                 <div class="brand-text">
-                    <h1>Minha Agenda</h1>
-                    <p>Organização do dia a dia</p>
+                    <h1>TaskFlow</h1>
+                    <p>Workspace de produtividade</p>
                 </div>
 
             </div>

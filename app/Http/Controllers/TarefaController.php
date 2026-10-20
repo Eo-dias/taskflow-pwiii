@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TarefaFormRequest;
 use App\Models\Projeto;
 use App\Models\Tarefa;
 use App\Models\Usuario;
@@ -107,7 +108,7 @@ class TarefaController extends Controller
         $projeto = Projeto::all();
         return view('insertTarefa', compact('projeto'));
     }
-    public function insert(Request $request)
+    public function insert(TarefaFormRequest $request)
     {
         $tarefa = new Tarefa();
 

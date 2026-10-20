@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ProjetoFormRequest;
 
 use App\Models\Projeto;
 use App\Models\Tarefa;
@@ -43,7 +44,7 @@ class ProjetoController extends Controller
         return view('insertProjeto', compact('usuario'));
     }
 
-    public function insert(Request $request)
+    public function insert(ProjetoFormRequest $request)
     {
         $projeto = new Projeto();
 
